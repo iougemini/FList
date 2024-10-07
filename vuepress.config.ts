@@ -74,7 +74,7 @@ export default defineUserConfig({
         // 仓库所有者的仓库名
         repository: "Xray-core"
       }),
-    }
+    },
 //    {
 //      mountPath: "/",
 //      analysis: githubReleasesFilesAnalysis({ user: "jianjianai", repository: "FList" }),
@@ -84,15 +84,15 @@ export default defineUserConfig({
 //      downProxy: cloudflarePagesDownProxy(),
 //    },
 //    {
-//      mountPath: "/",
+      mountPath: "/Soft",
       // 这里使用 fileUrlTreeAnalysis 文件放到对应的文件路径中
-//      analysis: fileUrlTreeAnalysis({
-//       "/test2/文件树-测试视频1.mp4": "https://github.com/jianjianai/FList/releases/download/root/test.video.2.1080p.webm",
+      analysis: fileUrlTreeAnalysis({
+       "/.NET 6.0 Desktop Runtime/v6.0.33": "https://download.visualstudio.microsoft.com/download/pr/3ebc1f91-a5ba-477e-9353-198fa4e13371/35f447d6820b078fd18523764a4f0213/windowsdesktop-runtime-6.0.33-win-x64.exe",
 //        "/文件树测试/文件树-测试视频1.mp4": "https://github.com/jianjianai/FList/releases/download/root/test.video.2.1080p.webm",
 //        "/文件树-测试视频1.mp4": "https://github.com/jianjianai/FList/releases/download/root/test.video.2.1080p.webm"
-//      }),
-//      downProxy: cloudflarePagesDownProxy(),//如果文件树地址下载比较慢，也可以配置代理
-//    },
+      }),
+      downProxy: cloudflarePagesDownProxy(),//如果文件树地址下载比较慢，也可以配置代理
+    }
 //    {
 //      mountPath: "/huggingface测试",
 //      analysis: huggingFaceDatasetsAnalysis({

@@ -1,4 +1,4 @@
-iimport { viteBundler } from '@vuepress/bundler-vite'
+import { viteBundler } from '@vuepress/bundler-vite'
 import { defineUserConfig } from 'vuepress'
 import { FileList } from './src/node/index.js'
 import { githubReleasesFilesAnalysis } from "./src/node/analysis/githubReleasesFilesAnalysis/index.js";
@@ -10,9 +10,6 @@ import { netlifyDownProxy } from './src/node/proxy/netlifyDownProxy/index.js';
 import { giteeReleasesFilesAnalysis } from './src/node/analysis/giteeReleasesFilesAnalysis/index.js';
 import { githubReposAnalysis } from './src/node/analysis/githubReposAnalysis/index.js';
 import { giteeReposAnalysis } from './src/node/analysis/giteeReposAnalysis/index.js';
-
-
-
 
 /**
  * 站点配置文件，没有注释的选项如果不知道有什么作用不建议修改，有注释的选项可以根据注释修改
@@ -46,10 +43,10 @@ export default defineUserConfig({
         authorizationToken: process.env.githubToken,
         // 分页大小，不懂得话就当作取最新的多少个标签吧。
         per_page: 10,
-		 // 下载代理配置,支持多个平台，参考:https://jjaw.cn/2024/8/3/flist-config-porxy/
-		 // 这个是为了解决github的国内下载慢的问题，和跨域问题，建议配置，不然pdf，txt，md等文件因为跨域无法预览
+        // 下载代理配置,支持多个平台，参考:https://jjaw.cn/2024/8/3/flist-config-porxy/
+        // 这个是为了解决github的国内下载慢的问题，和跨域问题，建议配置，不然pdf，txt，md等文件因为跨域无法预览
         // 如果你使用的不是 cloudflare Pages 部署需要删掉这一行，因为如果不是cloudflare Pages部署，这个代理是无法正常工作的
-		 downProxy: cloudflarePagesDownProxy(),
+        downProxy: cloudflarePagesDownProxy(),
       }),
     },
     {
@@ -60,15 +57,15 @@ export default defineUserConfig({
         // 仓库所有者的用户名
         user: "mihomo-party-org",
         // 仓库所有者的仓库名
-        repository: "mihomo-party"，
+        repository: "mihomo-party",
         // github 授权 Token, process.env.xxx  xxx 是环境变量名称。可以通过设置 githubToken 环境变量来配置
         authorizationToken: process.env.githubToken,
         // 分页大小，不懂得话就当作取最新的多少个标签吧。
         per_page: 10,
-		 // 下载代理配置,支持多个平台，参考:https://jjaw.cn/2024/8/3/flist-config-porxy/
-		 // 这个是为了解决github的国内下载慢的问题，和跨域问题，建议配置，不然pdf，txt，md等文件因为跨域无法预览
+        // 下载代理配置,支持多个平台，参考:https://jjaw.cn/2024/8/3/flist-config-porxy/
+        // 这个是为了解决github的国内下载慢的问题，和跨域问题，建议配置，不然pdf，txt，md等文件因为跨域无法预览
         // 如果你使用的不是 cloudflare Pages 部署需要删掉这一行，因为如果不是cloudflare Pages部署，这个代理是无法正常工作的
-		 downProxy: cloudflarePagesDownProxy(),
+        downProxy: cloudflarePagesDownProxy(),
       }),
     },
     {
@@ -79,15 +76,15 @@ export default defineUserConfig({
         // 仓库所有者的用户名
         user: "KaringX",
         // 仓库所有者的仓库名
-        repository: "karing"，
+        repository: "karing",
         // github 授权 Token, process.env.xxx  xxx 是环境变量名称。可以通过设置 githubToken 环境变量来配置
         authorizationToken: process.env.githubToken,
         // 分页大小，不懂得话就当作取最新的多少个标签吧。
         per_page: 10,
-		 // 下载代理配置,支持多个平台，参考:https://jjaw.cn/2024/8/3/flist-config-porxy/
-		 // 这个是为了解决github的国内下载慢的问题，和跨域问题，建议配置，不然pdf，txt，md等文件因为跨域无法预览
+        // 下载代理配置,支持多个平台，参考:https://jjaw.cn/2024/8/3/flist-config-porxy/
+        // 这个是为了解决github的国内下载慢的问题，和跨域问题，建议配置，不然pdf，txt，md等文件因为跨域无法预览
         // 如果你使用的不是 cloudflare Pages 部署需要删掉这一行，因为如果不是cloudflare Pages部署，这个代理是无法正常工作的
-		 downProxy: cloudflarePagesDownProxy(),		
+        downProxy: cloudflarePagesDownProxy(),
       }),
     },
     {
@@ -98,15 +95,15 @@ export default defineUserConfig({
         // 仓库所有者的用户名
         user: "chen08209",
         // 仓库所有者的仓库名
-        repository: "FlClash"，
+        repository: "FlClash",
         // github 授权 Token, process.env.xxx  xxx 是环境变量名称。可以通过设置 githubToken 环境变量来配置
         authorizationToken: process.env.githubToken,
         // 分页大小，不懂得话就当作取最新的多少个标签吧。
         per_page: 10,
-		 // 下载代理配置,支持多个平台，参考:https://jjaw.cn/2024/8/3/flist-config-porxy/
-		 // 这个是为了解决github的国内下载慢的问题，和跨域问题，建议配置，不然pdf，txt，md等文件因为跨域无法预览
+        // 下载代理配置,支持多个平台，参考:https://jjaw.cn/2024/8/3/flist-config-porxy/
+        // 这个是为了解决github的国内下载慢的问题，和跨域问题，建议配置，不然pdf，txt，md等文件因为跨域无法预览
         // 如果你使用的不是 cloudflare Pages 部署需要删掉这一行，因为如果不是cloudflare Pages部署，这个代理是无法正常工作的
-		 downProxy: cloudflarePagesDownProxy(),		
+        downProxy: cloudflarePagesDownProxy(),
       }),
     },
     {
@@ -117,17 +114,17 @@ export default defineUserConfig({
         // 仓库所有者的用户名
         user: "VirtualHotBar",
         // 仓库所有者的仓库名
-        repository: "NetMount"，
+        repository: "NetMount",
         // github 授权 Token, process.env.xxx  xxx 是环境变量名称。可以通过设置 githubToken 环境变量来配置
         authorizationToken: process.env.githubToken,
         // 分页大小，不懂得话就当作取最新的多少个标签吧。
         per_page: 10,
-		 // 下载代理配置,支持多个平台，参考:https://jjaw.cn/2024/8/3/flist-config-porxy/
-		 // 这个是为了解决github的国内下载慢的问题，和跨域问题，建议配置，不然pdf，txt，md等文件因为跨域无法预览
+        // 下载代理配置,支持多个平台，参考:https://jjaw.cn/2024/8/3/flist-config-porxy/
+        // 这个是为了解决github的国内下载慢的问题，和跨域问题，建议配置，不然pdf，txt，md等文件因为跨域无法预览
         // 如果你使用的不是 cloudflare Pages 部署需要删掉这一行，因为如果不是cloudflare Pages部署，这个代理是无法正常工作的
-		 downProxy: cloudflarePagesDownProxy(),		
+        downProxy: cloudflarePagesDownProxy(),
       }),
-    },    
+    },
     {
       // 挂载路径
       mountPath: "/V2rayN",
@@ -136,15 +133,15 @@ export default defineUserConfig({
         // 仓库所有者的用户名
         user: "2dust",
         // 仓库所有者的仓库名
-        repository: "v2rayN"，
+        repository: "v2rayN",
         // github 授权 Token, process.env.xxx  xxx 是环境变量名称。可以通过设置 githubToken 环境变量来配置
         authorizationToken: process.env.githubToken,
         // 分页大小，不懂得话就当作取最新的多少个标签吧。
         per_page: 10,
-		 // 下载代理配置,支持多个平台，参考:https://jjaw.cn/2024/8/3/flist-config-porxy/
-		 // 这个是为了解决github的国内下载慢的问题，和跨域问题，建议配置，不然pdf，txt，md等文件因为跨域无法预览
+        // 下载代理配置,支持多个平台，参考:https://jjaw.cn/2024/8/3/flist-config-porxy/
+        // 这个是为了解决github的国内下载慢的问题，和跨域问题，建议配置，不然pdf，txt，md等文件因为跨域无法预览
         // 如果你使用的不是 cloudflare Pages 部署需要删掉这一行，因为如果不是cloudflare Pages部署，这个代理是无法正常工作的
-		 downProxy: cloudflarePagesDownProxy(),		
+        downProxy: cloudflarePagesDownProxy(),
       }),
     },
     {
@@ -155,15 +152,15 @@ export default defineUserConfig({
         // 仓库所有者的用户名
         user: "SagerNet",
         // 仓库所有者的仓库名
-        repository: "sing-box"，
+        repository: "sing-box",
         // github 授权 Token, process.env.xxx  xxx 是环境变量名称。可以通过设置 githubToken 环境变量来配置
         authorizationToken: process.env.githubToken,
         // 分页大小，不懂得话就当作取最新的多少个标签吧。
         per_page: 10,
-		 // 下载代理配置,支持多个平台，参考:https://jjaw.cn/2024/8/3/flist-config-porxy/
-		 // 这个是为了解决github的国内下载慢的问题，和跨域问题，建议配置，不然pdf，txt，md等文件因为跨域无法预览
+        // 下载代理配置,支持多个平台，参考:https://jjaw.cn/2024/8/3/flist-config-porxy/
+        // 这个是为了解决github的国内下载慢的问题，和跨域问题，建议配置，不然pdf，txt，md等文件因为跨域无法预览
         // 如果你使用的不是 cloudflare Pages 部署需要删掉这一行，因为如果不是cloudflare Pages部署，这个代理是无法正常工作的
-		 downProxy: cloudflarePagesDownProxy(),		
+        downProxy: cloudflarePagesDownProxy(),
       }),
     },
     {
@@ -174,15 +171,15 @@ export default defineUserConfig({
         // 仓库所有者的用户名
         user: "MatsuriDayo",
         // 仓库所有者的仓库名
-        repository: "nekoray"，
+        repository: "nekoray",
         // github 授权 Token, process.env.xxx  xxx 是环境变量名称。可以通过设置 githubToken 环境变量来配置
         authorizationToken: process.env.githubToken,
         // 分页大小，不懂得话就当作取最新的多少个标签吧。
         per_page: 10,
-		 // 下载代理配置,支持多个平台，参考:https://jjaw.cn/2024/8/3/flist-config-porxy/
-		 // 这个是为了解决github的国内下载慢的问题，和跨域问题，建议配置，不然pdf，txt，md等文件因为跨域无法预览
+        // 下载代理配置,支持多个平台，参考:https://jjaw.cn/2024/8/3/flist-config-porxy/
+        // 这个是为了解决github的国内下载慢的问题，和跨域问题，建议配置，不然pdf，txt，md等文件因为跨域无法预览
         // 如果你使用的不是 cloudflare Pages 部署需要删掉这一行，因为如果不是cloudflare Pages部署，这个代理是无法正常工作的
-		 downProxy: cloudflarePagesDownProxy(),		
+        downProxy: cloudflarePagesDownProxy(),
       }),
     },
     {
@@ -193,15 +190,15 @@ export default defineUserConfig({
         // 仓库所有者的用户名
         user: "XTLS",
         // 仓库所有者的仓库名
-        repository: "Xray-core"，
+        repository: "Xray-core",
         // github 授权 Token, process.env.xxx  xxx 是环境变量名称。可以通过设置 githubToken 环境变量来配置
         authorizationToken: process.env.githubToken,
         // 分页大小，不懂得话就当作取最新的多少个标签吧。
         per_page: 10,
-		 // 下载代理配置,支持多个平台，参考:https://jjaw.cn/2024/8/3/flist-config-porxy/
-		 // 这个是为了解决github的国内下载慢的问题，和跨域问题，建议配置，不然pdf，txt，md等文件因为跨域无法预览
+        // 下载代理配置,支持多个平台，参考:https://jjaw.cn/2024/8/3/flist-config-porxy/
+        // 这个是为了解决github的国内下载慢的问题，和跨域问题，建议配置，不然pdf，txt，md等文件因为跨域无法预览
         // 如果你使用的不是 cloudflare Pages 部署需要删掉这一行，因为如果不是cloudflare Pages部署，这个代理是无法正常工作的
-		 downProxy: cloudflarePagesDownProxy(),		
+        downProxy: cloudflarePagesDownProxy(),
       }),
     },
     {
@@ -212,15 +209,15 @@ export default defineUserConfig({
         // 仓库所有者的用户名
         user: "v2fly",
         // 仓库所有者的仓库名
-        repository: "v2ray-core"，
+        repository: "v2ray-core",
         // github 授权 Token, process.env.xxx  xxx 是环境变量名称。可以通过设置 githubToken 环境变量来配置
         authorizationToken: process.env.githubToken,
         // 分页大小，不懂得话就当作取最新的多少个标签吧。
         per_page: 10,
-		 // 下载代理配置,支持多个平台，参考:https://jjaw.cn/2024/8/3/flist-config-porxy/
-		 // 这个是为了解决github的国内下载慢的问题，和跨域问题，建议配置，不然pdf，txt，md等文件因为跨域无法预览
+        // 下载代理配置,支持多个平台，参考:https://jjaw.cn/2024/8/3/flist-config-porxy/
+        // 这个是为了解决github的国内下载慢的问题，和跨域问题，建议配置，不然pdf，txt，md等文件因为跨域无法预览
         // 如果你使用的不是 cloudflare Pages 部署需要删掉这一行，因为如果不是cloudflare Pages部署，这个代理是无法正常工作的
-		 downProxy: cloudflarePagesDownProxy(),		
+        downProxy: cloudflarePagesDownProxy(),
       }),
     },
     {
@@ -231,62 +228,63 @@ export default defineUserConfig({
         // 仓库所有者的用户名
         user: "apernet",
         // 仓库所有者的仓库名
-        repository: "hysteria"，
+        repository: "hysteria",
         // github 授权 Token, process.env.xxx  xxx 是环境变量名称。可以通过设置 githubToken 环境变量来配置
         authorizationToken: process.env.githubToken,
         // 分页大小，不懂得话就当作取最新的多少个标签吧。
         per_page: 10,
-		 // 下载代理配置,支持多个平台，参考:https://jjaw.cn/2024/8/3/flist-config-porxy/
-		 // 这个是为了解决github的国内下载慢的问题，和跨域问题，建议配置，不然pdf，txt，md等文件因为跨域无法预览
+        // 下载代理配置,支持多个平台，参考:https://jjaw.cn/2024/8/3/flist-config-porxy/
+        // 这个是为了解决github的国内下载慢的问题，和跨域问题，建议配置，不然pdf，txt，md等文件因为跨域无法预览
         // 如果你使用的不是 cloudflare Pages 部署需要删掉这一行，因为如果不是cloudflare Pages部署，这个代理是无法正常工作的
-		 downProxy: cloudflarePagesDownProxy(),		
+        downProxy: cloudflarePagesDownProxy(),
       }),
     },
     {
+      // 挂载路径
       mountPath: "/Soft",
       // 这里使用 fileUrlTreeAnalysis 文件放到对应的文件路径中
       analysis: fileUrlTreeAnalysis({
-       "/.NET 6.0 Desktop Runtime/v6.0.33.exe": "https://download.visualstudio.microsoft.com/download/pr/3ebc1f91-a5ba-477e-9353-198fa4e13371/35f447d6820b078fd18523764a4f0213/windowsdesktop-runtime-6.0.33-win-x64.exe",
-       "/.NET 8.0 Desktop Runtime/v8.0.8.exe": "https://download.visualstudio.microsoft.com/download/pr/907765b0-2bf8-494e-93aa-5ef9553c5d68/a9308dc010617e6716c0e6abd53b05ce/windowsdesktop-runtime-8.0.8-win-x64.exe"，
-//        "/文件树测试/文件树-测试视频1.mp4": "https://github.com/jianjianai/FList/releases/download/root/test.video.2.1080p.webm",
-//        "/文件树-测试视频1.mp4": "https://github.com/jianjianai/FList/releases/download/root/test.video.2.1080p.webm"
+        "/.NET 6.0 Desktop Runtime/v6.0.33.exe": "https://download.visualstudio.microsoft.com/download/pr/3ebc1f91-a5ba-477e-9353-198fa4e13371/35f447d6820b078fd18523764a4f0213/windowsdesktop-runtime-6.0.33-win-x64.exe",
+        "/.NET 8.0 Desktop Runtime/v8.0.8.exe": "https://download.visualstudio.microsoft.com/download/pr/907765b0-2bf8-494e-93aa-5ef9553c5d68/a9308dc010617e6716c0e6abd53b05ce/windowsdesktop-runtime-8.0.8-win-x64.exe"
+        // "/文件树测试/文件树-测试视频1.mp4": "https://github.com/jianjianai/FList/releases/download/root/test.video.2.1080p.webm",
+        // "/文件树-测试视频1.mp4": "https://github.com/jianjianai/FList/releases/download/root/test.video.2.1080p.webm"
       }),
       downProxy: cloudflarePagesDownProxy(),//如果文件树地址下载比较慢，也可以配置代理
-    }，	
-//    {
-//      mountPath: "/huggingface测试",
-//      analysis: huggingFaceDatasetsAnalysis({
-//        userName: "Open-Orca",
-//        datasetsName: "OpenOrca",
-//        branchName: "main",
-//        path: "/",
-//        //最大深度,如果文件夹有很多层最大递归解析多少层，默认10
-//        maxDeep: 3
-//      }),
-//    },
-//    {
-//      mountPath: "/gitee测试/发行版",
-//      analysis: giteeReleasesFilesAnalysis({
-//        user: "jja8",
-//       repository: "flist-test",
-//        direction: "desc"
-//      })
-//    },
-//    {
-//      mountPath: "/gitee测试/仓库",
-//      analysis: giteeReposAnalysis({
-//        user: "jja8",
-//        repository: "flist-test"
-//      }),
-//    },
-//    {
-//      mountPath: "/ProgrammingVTuberLogos",
-//      analysis: githubReposAnalysis({
-//        user: "Aikoyori",
-//        repository: "ProgrammingVTuberLogos",
-//      }),
-//      downProxy: cloudflarePagesDownProxy()
-//    },
+    },
+//     {
+//       mountPath: "/huggingface测试",
+//       analysis: huggingFaceDatasetsAnalysis({
+//         userName: "Open-Orca",
+//         datasetsName: "OpenOrca",
+//         branchName: "main",
+//         path: "/",
+//         //最大深度,如果文件夹有很多层最大递归解析多少层，默认10
+//         maxDeep: 3
+//       }),
+//     },
+//     {
+//       mountPath: "/gitee测试/发行版",
+//       analysis: giteeReleasesFilesAnalysis({
+//         user: "jja8",
+//         repository: "flist-test",
+//         direction: "desc"
+//       })
+//     },
+//     {
+//       mountPath: "/gitee测试/仓库",
+//       analysis: giteeReposAnalysis({
+//         user: "jja8",
+//         repository: "flist-test"
+//       }),
+//     },
+//     {
+//       mountPath: "/ProgrammingVTuberLogos",
+//       analysis: githubReposAnalysis({
+//         user: "Aikoyori",
+//         repository: "ProgrammingVTuberLogos",
+//       }),
+//       downProxy: cloudflarePagesDownProxy()
+//     },
     // ... 可以配置多个挂载路径和仓库，以此类推
   ])
 })

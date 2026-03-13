@@ -146,25 +146,6 @@ export default defineUserConfig({
     },
     {
       // 挂载路径
-      mountPath: "/NetMount",
-      // 文件解析器，这里使用githubReleasesFilesAnalysis,可以解析github的release文件,https://github.com/apernet/hysteria/releases
-      analysis: githubReleasesFilesAnalysis({
-        // 仓库所有者的用户名
-        user: "VirtualHotBar",
-        // 仓库所有者的仓库名
-        repository: "NetMount",
-        // github 授权 Token, process.env.xxx  xxx 是环境变量名称。可以通过设置 githubToken 环境变量来配置
-        authorizationToken: process.env.githubToken,
-        // 分页大小，不懂得话就当作取最新的多少个标签吧。
-        per_page: 10,
-        // 下载代理配置,支持多个平台，参考:https://jjaw.cn/2024/8/3/flist-config-porxy/
-        // 这个是为了解决github的国内下载慢的问题，和跨域问题，建议配置，不然pdf，txt，md等文件因为跨域无法预览
-        // 如果你使用的不是 cloudflare Pages 部署需要删掉这一行，因为如果不是cloudflare Pages部署，这个代理是无法正常工作的
-        downProxy: cloudflarePagesDownProxy(),
-      }),
-    },
-    {
-      // 挂载路径
       mountPath: "/V2rayN",
       // 文件解析器，这里使用githubReleasesFilesAnalysis,可以解析github的release文件
       analysis: githubReleasesFilesAnalysis({
@@ -334,6 +315,63 @@ export default defineUserConfig({
         downProxy: cloudflarePagesDownProxy(),
       }),
     },	
+    {
+      // 挂载路径
+      mountPath: "/NetMount",
+      // 文件解析器，这里使用githubReleasesFilesAnalysis,可以解析github的release文件,https://github.com/apernet/hysteria/releases
+      analysis: githubReleasesFilesAnalysis({
+        // 仓库所有者的用户名
+        user: "VirtualHotBar",
+        // 仓库所有者的仓库名
+        repository: "NetMount",
+        // github 授权 Token, process.env.xxx  xxx 是环境变量名称。可以通过设置 githubToken 环境变量来配置
+        authorizationToken: process.env.githubToken,
+        // 分页大小，不懂得话就当作取最新的多少个标签吧。
+        per_page: 10,
+        // 下载代理配置,支持多个平台，参考:https://jjaw.cn/2024/8/3/flist-config-porxy/
+        // 这个是为了解决github的国内下载慢的问题，和跨域问题，建议配置，不然pdf，txt，md等文件因为跨域无法预览
+        // 如果你使用的不是 cloudflare Pages 部署需要删掉这一行，因为如果不是cloudflare Pages部署，这个代理是无法正常工作的
+        downProxy: cloudflarePagesDownProxy(),
+      }),
+    },
+    {
+      // 挂载路径
+      mountPath: "/Throne",
+      // 文件解析器，这里使用githubReleasesFilesAnalysis,可以解析github的release文件,https://github.com/apernet/hysteria/releases
+      analysis: githubReleasesFilesAnalysis({
+        // 仓库所有者的用户名
+        user: "throneproj",
+        // 仓库所有者的仓库名
+        repository: "Throne",
+        // github 授权 Token, process.env.xxx  xxx 是环境变量名称。可以通过设置 githubToken 环境变量来配置
+        authorizationToken: process.env.githubToken,
+        // 分页大小，不懂得话就当作取最新的多少个标签吧。
+        per_page: 10,
+        // 下载代理配置,支持多个平台，参考:https://jjaw.cn/2024/8/3/flist-config-porxy/
+        // 这个是为了解决github的国内下载慢的问题，和跨域问题，建议配置，不然pdf，txt，md等文件因为跨域无法预览
+        // 如果你使用的不是 cloudflare Pages 部署需要删掉这一行，因为如果不是cloudflare Pages部署，这个代理是无法正常工作的
+        downProxy: cloudflarePagesDownProxy(),
+      }),
+    },    
+    {
+      // 挂载路径
+      mountPath: "/SingBoxWin",
+      // 文件解析器，这里使用githubReleasesFilesAnalysis,可以解析github的release文件,https://github.com/apernet/hysteria/releases
+      analysis: githubReleasesFilesAnalysis({
+        // 仓库所有者的用户名
+        user: "xinggaoya",
+        // 仓库所有者的仓库名
+        repository: "sing-box-windows",
+        // github 授权 Token, process.env.xxx  xxx 是环境变量名称。可以通过设置 githubToken 环境变量来配置
+        authorizationToken: process.env.githubToken,
+        // 分页大小，不懂得话就当作取最新的多少个标签吧。
+        per_page: 10,
+        // 下载代理配置,支持多个平台，参考:https://jjaw.cn/2024/8/3/flist-config-porxy/
+        // 这个是为了解决github的国内下载慢的问题，和跨域问题，建议配置，不然pdf，txt，md等文件因为跨域无法预览
+        // 如果你使用的不是 cloudflare Pages 部署需要删掉这一行，因为如果不是cloudflare Pages部署，这个代理是无法正常工作的
+        downProxy: cloudflarePagesDownProxy(),
+      }),
+    },    
     {
       // 挂载路径
       mountPath: "/Soft",
